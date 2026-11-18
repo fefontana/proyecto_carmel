@@ -11,6 +11,13 @@ const Producto = sequelize.define(
     precio: { type: DataTypes.DECIMAL(10, 2), allowNull: false },
     stock: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 },
     imagen_url: { type: DataTypes.STRING(255), allowNull: true },
+    
+    // NUEVO CAMPO POR MULTER: Guarda la colección de imágenes del producto con sus metadatos (url, isMain)
+    images: { 
+      type: DataTypes.JSON, 
+      allowNull: true, 
+      defaultValue: [] 
+    },
     activo: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true },
   },
   { tableName: "productos" },

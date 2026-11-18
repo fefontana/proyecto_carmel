@@ -1,1 +1,6 @@
 .devdb/
+/docs
+/docs/.gitignore
+/CARMEL_API/.gitignore
+/CARMEL_API/public/
+/CARMEL_APP/.gitignore
