@@ -256,6 +256,7 @@ async function actualizar(req, res, next) {
             precio,
             stock,
             descripcion,
+            activo,
         } = req.body;
 
         const control = obtenerControlPortadas(
@@ -319,6 +320,9 @@ async function actualizar(req, res, next) {
             }),
             ...(stock !== undefined && {
                 stock: Number(stock),
+            }),
+            ...(activo !== undefined && {
+                activo: activo === true || activo === "true",
             }),
             images: imagenes,
         };
