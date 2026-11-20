@@ -1,2 +1,7 @@
-node_modules
+node_modules/
 .env
+/src/app-bckp.js
+# Ignoramos las imágenes subidas localmente con Multer
+public/uploads/products/*
+# Mantenemos la carpeta vacía en Git usando un archivo .gitkeep
+!public/uploads/products/.gitkeep
